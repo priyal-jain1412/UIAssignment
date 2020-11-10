@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="assets/styles/salesforce-lightning-design-system_touch.css" />
+      <link rel="stylesheet" href="assets/styles/salesforce-lightning-design-system_touch.min.css" />
+      <link rel="stylesheet" href="assets/styles/salesforce-lightning-design-system-imports.sanitized.css" />
+      <link rel="stylesheet" href="assets/styles/salesforce-lightning-design-system.css" />
+      <link rel="stylesheet" href="assets/styles/salesforce-lightning-design-system.min.css" />
+      <link rel="stylesheet" href="roxcss.css" />
+      <script src="roxjs.js"></script>
+</head>
+<body class="main-container">
+	<header class="header-container ">
+        <div class="slds-box">
+        <div class="slds-grid slds-clearfix">
+          <div class=" slds-size_xxx-small slds-p-top_medium slds-float_right">
+            <span class="hidden-button nav-button" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+          </div>
+          <div class="slds-col_bump-right slds-size_x-small slad-m-right_large">            
+            <span class="slds-size_xx-small">
+              <img src="logo4.png" alt="image">
+            </span>
+          </div>
+          <div class="slds-size_1-of-12 hidden-text slds-p-top_large slds-float_right">
+            <span class="slds-p-left_xx-large">Dashboard</span>
+          </div>
+          <div class="  slds-size_1-of-12 slds-p-top_large slds-float_right">
+            <span >
+              <img class="slds-size_xxx-small slds-p-left_large slds-m-left_large" src="notification_60.png" alt="image ">
+            </span>
+          </div>
+          <div class=" slds-size_x-small slds-size_1-of-12 slds-p-top_large slds-float_right">
+            <span >
+              <img class="slds-size_xxx-small slds-p-left_large" src="emoji_60.png" alt="image">
+            </span>
+          </div>
+          <div class="slds-size_2-of-12 hidden-text slds-p-top_large slds-float_right">
+            <span class="slds-p-left_xx-large">Stina Gunnarsdottir</span>
+          </div>
+          
+          <div class=" slds-size_xxx-small  hidden-text slds-p-top_large slds-float_right">
+            <span >
+              <img class="slds-size_xxx-small slds-size_1-of-2" src="chevrondown_60.png" alt="image">
+            </span>
+          </div>
+        </div>
+      </div>
+</header>
+
+
+
+<div id="mySidenav" class="sidenav">
+  <span class="hidden-button"><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></span>
+  
+<nav class="slds-nav-vertical" aria-label="Sub page">
+  <div class="slds-nav-vertical__section">
+      <h2 id="folder-header" class="slds-nav-vertical__title slds-m-left_x-large">Summary</h2>
+      <ul aria-describedby="folder-header">
+        <li class="slds-nav-vertical__item">
+          <a href="javascript:void(0);" class="slds-nav-vertical__action slds-m-left_x-large">Account Summary</a>
+        </li>
+      </ul>
+    </div>
+    <div class="slds-nav-vertical__section">
+      <h2 id="entity-header" class="slds-nav-vertical__title slds-m-left_x-large">Investment</h2>
+      <ul aria-describedby="entity-header">
+        <li class="slds-nav-vertical__item">
+          <a href="javascript:void(0);" class="slds-nav-vertical__action slds-m-left_x-large">My Investment</a>
+        </li>
+        <li class="slds-nav-vertical__item slds-is-active">
+          <a href="javascript:void(0);" class="slds-nav-vertical__action slds-m-left_x-large" aria-current="true">Investor List</a>
+        </li>
+      </ul>
+    </div>
+    <div class="slds-nav-vertical__section">
+      <h2 id="folder-header" class="slds-nav-vertical__title slds-m-left_x-large">Documents</h2>
+      <ul aria-describedby="folder-header">
+        <li class="slds-nav-vertical__item">
+          <a href="javascript:void(0);" class="slds-nav-vertical__action slds-m-left_x-large">My Documents</a>
+        </li>
+        <li class="slds-nav-vertical__item">
+          <a href="javascript:void(0);" class="slds-nav-vertical__action slds-m-left_x-large">Delegate Documents</a>
+        </li>
+      </ul>
+    </div>
+    <div class="slds-nav-vertical__section">
+      <h2 id="folder-header" class="slds-nav-vertical__title slds-m-left_x-large">Transaction</h2>
+      <ul aria-describedby="folder-header">
+        <li class="slds-nav-vertical__item">
+          <a href="javascript:void(0);" class="slds-nav-vertical__action slds-m-left_x-large">My Transaction</a>
+        </li>
+      </ul>
+    </div>
+    <div class="slds-nav-vertical__section">
+      <h2 id="folder-header" class="slds-nav-vertical__title slds-m-left_x-large">Delegate</h2>
+      <ul aria-describedby="folder-header">
+        <li class="slds-nav-vertical__item">
+          <a href="javascript:void(0);" class="slds-nav-vertical__action slds-m-left_x-large">My Delegate</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+
+<div id="main" class="container">
+	<body >
+		<div class="slds-grid slds-clearfix slds-grid_align-end slds-p-top_medium slds-p-left_medium slds-p-right_medium">
+			
+			<div class="slds-p-top_large slds-size_2-of-12 slds-col_bump-right slds-float_left slds-size_x-small ">            
+            	<span>
+		            <article class="slds-float_left slds-p-around_x-small slds-size_x-large name-size ">
+		              <div><p  class="slds-size_">Investor List</p></div>
+		            </article>
+		        </span>
+            </div>
+
+            <div class="slds-size_3-of-12 hidden-text slds-p-top_large ">
+                 
+			              <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right" role="none">
+					          <input type="text" class="slds-input slds-button slds-combobox__input " id="combobox-id-1" aria-autocomplete="list" aria-controls="listbox-id-1" autocomplete="off" role="textbox" placeholder="Search by Name or Email....." />
+					          <span class="slds-icon_container slds-icon-utility-search slds-input__icon slds-input__icon_right">
+					            <svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
+					              <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#search"></use>
+					            </svg>
+					          </span>
+			        	   </div>
+            </div>
+
+            <div class="slds-size_1-of-12  slds-p-top_large ">
+            	
+		              <div class="slds-button-group " role="group">
+		                  <button class="button-color slds-button slds-button_brand" >Save</button>
+		                  <div class="slds-dropdown-trigger slds-dropdown-trigger_click slds-button_last">
+		                    <button class="button-color slds-button slds-button_icon slds-button_icon-brand" aria-haspopup="true" title="More Actions">
+		                      <svg class="slds-button__icon" aria-hidden="true">
+		                        <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+		                      </svg>
+		                      <span class="slds-assistive-text">More Actions</span>
+		                    </button>
+		                  </div>
+		                </div>
+		           
+            </div>
+
+            <div class="slds-size_1-of-12 hidden-text   slds-p-top_large ">
+            	
+		              <div class="slds-button-group " role="group">
+		                  <button class="button-color slds-button slds-button_brand" >Both</button>
+		                  <div class="slds-dropdown-trigger slds-dropdown-trigger_click slds-button_last">
+		                    <button class="button-color slds-button slds-button_icon slds-button_icon-brand" aria-haspopup="true" title="More Actions">
+		                      <svg class="slds-button__icon" aria-hidden="true">
+		                        <use xlink:href="../assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+		                      </svg>
+		                      <span class="slds-assistive-text">More Actions</span>
+		                    </button>
+		                  </div>
+		                </div>
+		           
+            </div>
+
+            <div class="slds-size_1-of-12 hidden-text slds-p-top_large slds-clearfix">
+            	<span>
+		            <article class="slds-card slds-size_xxx-small slds-p-around_x-small slds-float_right">
+		              <img class="slds-size_1-of-2 slds-align_absolute-center " src="ad_set_60.png" alt="image " onclick="grid_view()">
+		            </article>
+		         </span>
+		         
+            </div>
+
+            <div class="slds-size_1-of-12 hidden-text slds-p-top_large ">
+            	<span>
+		            <article class="slds-card slds-size_xxx-small slds-p-around_x-small ">
+		              <img class="slds-size_1-of-2 slds-align_absolute-center" src="rows_60.png " alt="image " onclick="list_view()">		            
+		            </article>
+		         </span>
+            </div>
+
+            <div class="slds-size_1-of-12 hidden-text slds-p-top_large ">
+            	<span>
+            		<article class="slds-card slds-size_xxx-small slds-p-around_x-small">
+		              <img class="slds-size_1-of-2 slds-align_absolute-center" src="open_120.png" alt="image ">		            
+		            </article>
+		         </span>
+            </div>
+
+		</div>
+
+		<div class="slds-grid slds-wrap slds-gutters_large slds-p-around_medium" >
+			<div class="slds-col  slds-size_12-of-12   ">
+				<div class="slds-grid slds-wrap hidden-header" id="header-hidden">
+					  
+					  <div class="slds-col slds-large-size_1-of-12 slds-clearfix slds-float_right slds-large-order_9 slds-align_absolute-center">
+					    <span><p class="slds-float_right"><b class="show-content">. . .</b></p></span>
+					  </div>
+					  <div class="slds-col slds-large-size_1-of-12  slds-align_absolute-center slds-large-order_1 slds-p-top_x-large slds-p-bottom_x-large">
+					    <span><img class="email-hidden slds-size_xx-small" src="pic3.jpeg" alt="image"></span>
+					  </div>
+					  <div class="slds-col slds-align_absolute-center slds-large-size_3-of-12 slds-large-order_2">
+					    <span><p class="slds-max-large-size_1-of-1 text-font3">Name</p></span>
+					  </div>
+					  <div class="slds-col email-hidden slds-large-size_1-of-12 slds-align_absolute-center email-hidden slds-large-order_3 slds-p-bottom_large">
+					    <span><p class=" slds-x-large-size_1-of-1 text-font3">Usegu@roc.com</p></span>
+					  </div>
+					  <div class="slds-col email-hidden slds-large-size_1-of-12 slds-align_absolute-center slds-large-order_4">
+					    <span><p class=" slds-x-large-size_1-of-1 text-font3">Total Contribution</p></span>
+					  </div>
+					  <div class="slds-col slds-large-size_1-of-12 slds-align_absolute-center slds-large-order_5">
+					    <span><p class=" text-font3">Total Distribution</p></span>
+					  </div>
+					  <div class="slds-col  slds-large-size_1-of-12 slds-p-right_x-large slds-align_absolute-center slds-large-order_6">
+					    <span><p class=" text-font3">Total Contribution</p></span>
+					  </div>
+					  <div class="slds-col  slds-large-size_1-of-12 slds-align_absolute-center slds-large-order_7">
+					    <span><p class="  text-font3">Total Balance</p></span>
+					  </div>
+					  <div class="slds-col slds-large-size_2-of-12  slds-large-order_8 slds-align_absolute-center ammount-hidden">
+					    <span class="text-font3">Details</span>
+					  </div>
+					 
+					</div>
+			</div>
+		</div>
+
+		<div class="slds-grid slds-wrap slds-gutters_large slds-p-around_medium" id="parent-grid">
+			
+
+			
+
+			<div class="slds-col  slds-size_12-of-12   slds-p-bottom_x-large remove-padding">
+				<span>
+					<article class="slds-card">
+					<div class="slds-grid slds-wrap">
+					  
+					  <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-12 slds-clearfix slds-float_right slds-large-order_9 slds-align_absolute-center">
+					    <span><p class="slds-float_right"><b class="show-content">. . .</b></p></span>
+					  </div>
+					  <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-12  slds-align_absolute-center slds-large-order_1 slds-p-top_x-large slds-p-bottom_x-large">
+					    <span><img class="slds-size_xx-small" src="pic4.jpeg" alt="image"></span>
+					  </div>
+					  <div class="slds-col slds-size_1-of-1 slds-align_absolute-center slds-large-size_3-of-12 slds-large-order_2">
+					    <span><p class="slds-max-large-size_1-of-1 text-font1">Usegu Suzuki</p></span>
+					  </div>
+					  <div class="slds-col email-hidden slds-size_1-of-1 slds-large-size_1-of-12 email-hidden slds-align_absolute-center slds-large-order_3 slds-p-bottom_large">
+					    <span><p class="slds-x-large-size_1-of-1 text-font2">Usegu@roc.com</p></span>
+					  </div>
+					  <div class="slds-col email-hidden slds-size_1-of-1 slds-large-size_1-of-12 slds-align_absolute-center slds-large-order_4">
+					    <span><p class=" slds-x-large-size_1-of-1 text-font2">Total Contribution</p></span>
+					  </div>
+					  <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-12 slds-align_absolute-center slds-large-order_5">
+					    <span><p class="slds-size_xx-large text-font1">$24,346</p></span>
+					  </div>
+					  <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-12 slds-p-right_x-large slds-align_absolute-center slds-large-order_6 ammount-hidden text-font1">
+					    <span><p >$242,34</p></span>
+					  </div>
+					  <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-12 slds-align_absolute-center slds-large-order_7 ammount-hidden text-font1">
+					    <span><p >$242,36</p></span>
+					  </div>
+					  <div class="slds-col slds-size_1-of-1 slds-large-size_2-of-12  slds-large-order_8 slds-align_absolute-center ammount-hidden text-font1">
+					    <span><img class="slds-card  slds-size_1-of-4" src="open_120 copy.png" alt="image ">View</span>
+					  </div>
+					 
+					</div>
+					<footer class=" slds-card__footer email-hidden ">
+						<a class="slds-card__footer-action slds-align_absolute-center " href="javascript:void(0);">View Details
+						<span class="slds-assistive-text">Accounts</span>
+						</a>
+						</footer>
+				</article>
+			 </span>
+			</div>
+
+			<div class="slds-col  slds-size_12-of-12   slds-p-bottom_x-large remove-padding">
+				<span>
+					<article class="slds-card">
+					<div class="slds-grid slds-wrap">
+					  
+					  <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-12 slds-clearfix slds-float_right slds-large-order_9 slds-align_absolute-center">
+					    <span><p class="slds-float_right"><b class="show-content">. . .</b></p></span>
+					  </div>
+					  <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-12  slds-align_absolute-center slds-large-order_1 slds-p-top_x-large slds-p-bottom_x-large">
+					    <span><img class="slds-size_xx-small" src="pic1.jpeg" alt="image"></span>
+					  </div>
+					  <div class="slds-col slds-size_1-of-1 slds-align_absolute-center slds-large-size_3-of-12 slds-large-order_2">
+					    <span><p class="slds-max-large-size_1-of-1 text-font1">Usegu Suzuki</p></span>
+					  </div>
+					  <div class="slds-col email-hidden slds-size_1-of-1 slds-large-size_1-of-12 email-hidden slds-align_absolute-center slds-large-order_3 slds-p-bottom_large">
+					    <span><p class="slds-x-large-size_1-of-1 text-font2">Usegu@roc.com</p></span>
+					  </div>
+					  <div class="slds-col email-hidden slds-size_1-of-1 slds-large-size_1-of-12 slds-align_absolute-center slds-large-order_4">
+					    <span><p class=" slds-x-large-size_1-of-1 text-font2">Total Contribution</p></span>
+					  </div>
+					  <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-12 slds-align_absolute-center slds-large-order_5">
+					    <span><p class="slds-size_xx-large text-font1">$24,346</p></span>
+					  </div>
+					  <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-12 slds-p-right_x-large slds-align_absolute-center slds-large-order_6 ammount-hidden text-font1">
+					    <span><p >$242,34</p></span>
+					  </div>
+					  <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-12 slds-align_absolute-center slds-large-order_7 ammount-hidden text-font1">
+					    <span><p >$242,36</p></span>
+					  </div>
+					  <div class="slds-col slds-size_1-of-1 slds-large-size_2-of-12  slds-large-order_8 slds-align_absolute-center ammount-hidden text-font1">
+					    <span><img class="slds-card  slds-size_1-of-4" src="open_120 copy.png" alt="image ">View</span>
+					  </div>
+					 
+					</div>
+					<footer class=" slds-card__footer email-hidden ">
+						<a class="slds-card__footer-action slds-align_absolute-center " href="javascript:void(0);">View Details
+						<span class="slds-assistive-text">Accounts</span>
+						</a>
+						</footer>
+				</article>
+			 </span>
+			</div>
+
+			<div class="slds-col  slds-size_12-of-12   slds-p-bottom_x-large remove-padding">
+				<span>
+					<article class="slds-card">
+					<div class="slds-grid slds-wrap">
+					  
+					  <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-12 slds-clearfix slds-float_right slds-large-order_9 slds-align_absolute-center">
+					    <span><p class="slds-float_right"><b class="show-content">. . .</b></p></span>
+					  </div>
+					  <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-12  slds-align_absolute-center slds-large-order_1 slds-p-top_x-large slds-p-bottom_x-large">
+					    <span><img class="slds-size_xx-small" src="pic3.jpeg" alt="image"></span>
+					  </div>
+					  <div class="slds-col slds-size_1-of-1 slds-align_absolute-center slds-large-size_3-of-12 slds-large-order_2">
+					    <span><p class="slds-max-large-size_1-of-1 text-font1">Usegu Suzuki</p></span>
+					  </div>
+					  <div class="slds-col email-hidden slds-size_1-of-1 slds-large-size_1-of-12 email-hidden slds-align_absolute-center slds-large-order_3 slds-p-bottom_large">
+					    <span><p class="slds-x-large-size_1-of-1 text-font2">Usegu@roc.com</p></span>
+					  </div>
+					  <div class="slds-col email-hidden slds-size_1-of-1 slds-large-size_1-of-12 slds-align_absolute-center slds-large-order_4">
+					    <span><p class=" slds-x-large-size_1-of-1 text-font2">Total Contribution</p></span>
+					  </div>
+					  <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-12 slds-align_absolute-center slds-large-order_5">
+					    <span><p class="slds-size_xx-large text-font1">$24,346</p></span>
+					  </div>
+					  <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-12 slds-p-right_x-large slds-align_absolute-center slds-large-order_6 ammount-hidden text-font1">
+					    <span><p >$242,34</p></span>
+					  </div>
+					  <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-12 slds-align_absolute-center slds-large-order_7 ammount-hidden text-font1">
+					    <span><p >$242,36</p></span>
+					  </div>
+					  <div class="slds-col slds-size_1-of-1 slds-large-size_2-of-12  slds-large-order_8 slds-align_absolute-center ammount-hidden text-font1">
+					    <span><img class="slds-card  slds-size_1-of-4" src="open_120 copy.png" alt="image ">View</span>
+					  </div>
+					 
+					</div>
+					<footer class=" slds-card__footer email-hidden ">
+						<a class="slds-card__footer-action slds-align_absolute-center " href="javascript:void(0);">View Details
+						<span class="slds-assistive-text">Accounts</span>
+						</a>
+						</footer>
+				</article>
+			 </span>
+			</div>
+
+			<div class="slds-col  slds-size_12-of-12   slds-p-bottom_x-large remove-padding">
+				<span>
+					<article class="slds-card">
+					<div class="slds-grid slds-wrap">
+					  
+					  <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-12 slds-clearfix slds-float_right slds-large-order_9 slds-align_absolute-center">
+					    <span><p class="slds-float_right"><b class="show-content">. . .</b></p></span>
+					  </div>
+					  <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-12  slds-align_absolute-center slds-large-order_1 slds-p-top_x-large slds-p-bottom_x-large">
+					    <span><img class="slds-size_xx-small" src="pic4.jpeg" alt="image"></span>
+					  </div>
+					  <div class="slds-col slds-size_1-of-1 slds-align_absolute-center slds-large-size_3-of-12 slds-large-order_2">
+					    <span><p class="slds-max-large-size_1-of-1 text-font1">Usegu Suzuki</p></span>
+					  </div>
+					  <div class="slds-col email-hidden slds-size_1-of-1 slds-large-size_1-of-12 email-hidden slds-align_absolute-center slds-large-order_3 slds-p-bottom_large">
+					    <span><p class="slds-x-large-size_1-of-1 text-font2">Usegu@roc.com</p></span>
+					  </div>
+					  <div class="slds-col email-hidden slds-size_1-of-1 slds-large-size_1-of-12 slds-align_absolute-center slds-large-order_4">
+					    <span><p class=" slds-x-large-size_1-of-1 text-font2">Total Contribution</p></span>
+					  </div>
+					  <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-12 slds-align_absolute-center slds-large-order_5">
+					    <span><p class="slds-size_xx-large text-font1">$24,346</p></span>
+					  </div>
+					  <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-12 slds-p-right_x-large slds-align_absolute-center slds-large-order_6 ammount-hidden text-font1">
+					    <span><p >$242,34</p></span>
+					  </div>
+					  <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-12 slds-align_absolute-center slds-large-order_7 ammount-hidden text-font1">
+					    <span><p >$242,36</p></span>
+					  </div>
+					  <div class="slds-col slds-size_1-of-1 slds-large-size_2-of-12  slds-large-order_8 slds-align_absolute-center ammount-hidden text-font1">
+					    <span><img class="slds-card  slds-size_1-of-4" src="open_120 copy.png" alt="image ">View</span>
+					  </div>
+					 
+					</div>
+					<footer class=" slds-card__footer email-hidden ">
+						<a class="slds-card__footer-action slds-align_absolute-center " href="javascript:void(0);">View Details
+						<span class="slds-assistive-text">Accounts</span>
+						</a>
+						</footer>
+				</article>
+			 </span>
+			</div>
+
+			<div class="slds-col  slds-size_12-of-12   slds-p-bottom_x-large remove-padding">
+				<span>
+					<article class="slds-card">
+					<div class="slds-grid slds-wrap">
+					  
+					  <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-12 slds-clearfix slds-float_right slds-large-order_9 slds-align_absolute-center">
+					    <span><p class="slds-float_right"><b class="show-content">. . .</b></p></span>
+					  </div>
+					  <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-12  slds-align_absolute-center slds-large-order_1 slds-p-top_x-large slds-p-bottom_x-large">
+					    <span><img class="slds-size_xx-small" src="pic1.jpeg" alt="image"></span>
+					  </div>
+					  <div class="slds-col slds-size_1-of-1 slds-align_absolute-center slds-large-size_3-of-12 slds-large-order_2">
+					    <span><p class="slds-max-large-size_1-of-1 text-font1">Usegu Suzuki</p></span>
+					  </div>
+					  <div class="slds-col email-hidden slds-size_1-of-1 slds-large-size_1-of-12 email-hidden slds-align_absolute-center slds-large-order_3 slds-p-bottom_large">
+					    <span><p class="slds-x-large-size_1-of-1 text-font2">Usegu@roc.com</p></span>
+					  </div>
+					  <div class="slds-col email-hidden slds-size_1-of-1 slds-large-size_1-of-12 slds-align_absolute-center slds-large-order_4">
+					    <span><p class=" slds-x-large-size_1-of-1 text-font2">Total Contribution</p></span>
+					  </div>
+					  <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-12 slds-align_absolute-center slds-large-order_5">
+					    <span><p class="slds-size_xx-large text-font1">$24,346</p></span>
+					  </div>
+					  <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-12 slds-p-right_x-large slds-align_absolute-center slds-large-order_6 ammount-hidden text-font1">
+					    <span><p >$242,34</p></span>
+					  </div>
+					  <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-12 slds-align_absolute-center slds-large-order_7 ammount-hidden text-font1">
+					    <span><p >$242,36</p></span>
+					  </div>
+					  <div class="slds-col slds-size_1-of-1 slds-large-size_2-of-12  slds-large-order_8 slds-align_absolute-center ammount-hidden text-font1">
+					    <span><img class="slds-card  slds-size_1-of-4" src="open_120 copy.png" alt="image ">View</span>
+					  </div>
+					 
+					</div>
+					<footer class=" slds-card__footer email-hidden ">
+						<a class="slds-card__footer-action slds-align_absolute-center " href="javascript:void(0);">View Details
+						<span class="slds-assistive-text">Accounts</span>
+						</a>
+						</footer>
+				</article>
+			 </span>
+			</div>
+
+			<div class="slds-col  slds-size_12-of-12   slds-p-bottom_x-large remove-padding">
+				<span>
+					<article class="slds-card">
+					<div class="slds-grid slds-wrap">
+					  
+					  <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-12 slds-clearfix slds-float_right slds-large-order_9 slds-align_absolute-center">
+					    <span><p class="slds-float_right"><b class="show-content">. . .</b></p></span>
+					  </div>
+					  <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-12  slds-align_absolute-center slds-large-order_1 slds-p-top_x-large slds-p-bottom_x-large">
+					    <span><img class="slds-size_xx-small" src="pic2.jpeg" alt="image"></span>
+					  </div>
+					  <div class="slds-col slds-size_1-of-1 slds-align_absolute-center slds-large-size_3-of-12 slds-large-order_2">
+					    <span><p class="slds-max-large-size_1-of-1 text-font1">Usegu Suzuki</p></span>
+					  </div>
+					  <div class="slds-col email-hidden slds-size_1-of-1 slds-large-size_1-of-12 email-hidden slds-align_absolute-center slds-large-order_3 slds-p-bottom_large">
+					    <span><p class="slds-x-large-size_1-of-1 text-font2">Usegu@roc.com</p></span>
+					  </div>
+					  <div class="slds-col email-hidden slds-size_1-of-1 slds-large-size_1-of-12 slds-align_absolute-center slds-large-order_4">
+					    <span><p class=" slds-x-large-size_1-of-1 text-font2">Total Contribution</p></span>
+					  </div>
+					  <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-12 slds-align_absolute-center slds-large-order_5">
+					    <span><p class="slds-size_xx-large text-font1">$24,346</p></span>
+					  </div>
+					  <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-12 slds-p-right_x-large slds-align_absolute-center slds-large-order_6 ammount-hidden text-font1">
+					    <span><p >$242,34</p></span>
+					  </div>
+					  <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-12 slds-align_absolute-center slds-large-order_7 ammount-hidden text-font1">
+					    <span><p >$242,36</p></span>
+					  </div>
+					  <div class="slds-col slds-size_1-of-1 slds-large-size_2-of-12  slds-large-order_8 slds-align_absolute-center ammount-hidden text-font1">
+					    <span><img class="slds-card  slds-size_1-of-4" src="open_120 copy.png" alt="image ">View</span>
+					  </div>
+					 
+					</div>
+					<footer class=" slds-card__footer email-hidden ">
+						<a class="slds-card__footer-action slds-align_absolute-center " href="javascript:void(0);">View Details
+						<span class="slds-assistive-text">Accounts</span>
+						</a>
+						</footer>
+				</article>
+			 </span>
+			</div>
+
+			<div class="slds-col  slds-size_12-of-12   slds-p-bottom_x-large remove-padding">
+				<span>
+					<article class="slds-card">
+					<div class="slds-grid slds-wrap">
+					  
+					  <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-12 slds-clearfix slds-float_right slds-large-order_9 slds-align_absolute-center">
+					    <span><p class="slds-float_right"><b class="show-content">. . .</b></p></span>
+					  </div>
+					  <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-12  slds-align_absolute-center slds-large-order_1 slds-p-top_x-large slds-p-bottom_x-large">
+					    <span><img class="slds-size_xx-small" src="pic3.jpeg" alt="image"></span>
+					  </div>
+					  <div class="slds-col slds-size_1-of-1 slds-align_absolute-center slds-large-size_3-of-12 slds-large-order_2">
+					    <span><p class="slds-max-large-size_1-of-1 text-font1">Usegu Suzuki</p></span>
+					  </div>
+					  <div class="slds-col email-hidden slds-size_1-of-1 slds-large-size_1-of-12 email-hidden slds-align_absolute-center slds-large-order_3 slds-p-bottom_large">
+					    <span><p class="slds-x-large-size_1-of-1 text-font2">Usegu@roc.com</p></span>
+					  </div>
+					  <div class="slds-col email-hidden slds-size_1-of-1 slds-large-size_1-of-12 slds-align_absolute-center slds-large-order_4">
+					    <span><p class=" slds-x-large-size_1-of-1 text-font2">Total Contribution</p></span>
+					  </div>
+					  <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-12 slds-align_absolute-center slds-large-order_5">
+					    <span><p class="slds-size_xx-large text-font1">$24,346</p></span>
+					  </div>
+					  <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-12 slds-p-right_x-large slds-align_absolute-center slds-large-order_6 ammount-hidden text-font1">
+					    <span><p >$242,34</p></span>
+					  </div>
+					  <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-12 slds-align_absolute-center slds-large-order_7 ammount-hidden text-font1">
+					    <span><p >$242,36</p></span>
+					  </div>
+					  <div class="slds-col slds-size_1-of-1 slds-large-size_2-of-12  slds-large-order_8 slds-align_absolute-center ammount-hidden text-font1">
+					    <span><img class="slds-card  slds-size_1-of-4" src="open_120 copy.png" alt="image ">View</span>
+					  </div>
+					 
+					</div>
+					<footer class=" slds-card__footer email-hidden ">
+						<a class="slds-card__footer-action slds-align_absolute-center " href="javascript:void(0);">View Details
+						<span class="slds-assistive-text">Accounts</span>
+						</a>
+						</footer>
+				</article>
+			 </span>
+			</div>
+
+			<div class="slds-col  slds-size_12-of-12   slds-p-bottom_x-large remove-padding">
+				<span>
+					<article class="slds-card">
+					<div class="slds-grid slds-wrap">
+					  
+					  <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-12 slds-clearfix slds-float_right slds-large-order_9 slds-align_absolute-center">
+					    <span><p class="slds-float_right"><b class="show-content">. . .</b></p></span>
+					  </div>
+					  <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-12  slds-align_absolute-center slds-large-order_1 slds-p-top_x-large slds-p-bottom_x-large">
+					    <span><img class="slds-size_xx-small" src="pic4.jpeg" alt="image"></span>
+					  </div>
+					  <div class="slds-col slds-size_1-of-1 slds-align_absolute-center slds-large-size_3-of-12 slds-large-order_2">
+					    <span><p class="slds-max-large-size_1-of-1 text-font1">Usegu Suzuki</p></span>
+					  </div>
+					  <div class="slds-col email-hidden slds-size_1-of-1 slds-large-size_1-of-12 email-hidden slds-align_absolute-center slds-large-order_3 slds-p-bottom_large">
+					    <span><p class="slds-x-large-size_1-of-1 text-font2">Usegu@roc.com</p></span>
+					  </div>
+					  <div class="slds-col email-hidden slds-size_1-of-1 slds-large-size_1-of-12 slds-align_absolute-center slds-large-order_4">
+					    <span><p class=" slds-x-large-size_1-of-1 text-font2">Total Contribution</p></span>
+					  </div>
+					  <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-12 slds-align_absolute-center slds-large-order_5">
+					    <span><p class="slds-size_xx-large text-font1">$24,346</p></span>
+					  </div>
+					  <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-12 slds-p-right_x-large slds-align_absolute-center slds-large-order_6 ammount-hidden text-font1">
+					    <span><p >$242,34</p></span>
+					  </div>
+					  <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-12 slds-align_absolute-center slds-large-order_7 ammount-hidden text-font1">
+					    <span><p >$242,36</p></span>
+					  </div>
+					  <div class="slds-col slds-size_1-of-1 slds-large-size_2-of-12  slds-large-order_8 slds-align_absolute-center ammount-hidden text-font1">
+					    <span><img class="slds-card  slds-size_1-of-4" src="open_120 copy.png" alt="image ">View</span>
+					  </div>
+					 
+					</div>
+					<footer class=" slds-card__footer email-hidden ">
+						<a class="slds-card__footer-action slds-align_absolute-center " href="javascript:void(0);">View Details
+						<span class="slds-assistive-text">Accounts</span>
+						</a>
+						</footer>
+				</article>
+			 </span>
+			</div>
+
+			<div class="slds-col  slds-size_12-of-12   slds-p-bottom_x-large remove-padding">
+				<span>
+					<article class="slds-card">
+					<div class="slds-grid slds-wrap">
+					  
+					  <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-12 slds-clearfix slds-float_right slds-large-order_9 slds-align_absolute-center">
+					    <span><p class="slds-float_right"><b class="show-content">. . .</b></p></span>
+					  </div>
+					  <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-12  slds-align_absolute-center slds-large-order_1 slds-p-top_x-large slds-p-bottom_x-large">
+					    <span><img class="slds-size_xx-small" src="pic1.jpeg" alt="image"></span>
+					  </div>
+					  <div class="slds-col slds-size_1-of-1 slds-align_absolute-center slds-large-size_3-of-12 slds-large-order_2">
+					    <span><p class="slds-max-large-size_1-of-1 text-font1">Usegu Suzuki</p></span>
+					  </div>
+					  <div class="slds-col email-hidden slds-size_1-of-1 slds-large-size_1-of-12 email-hidden slds-align_absolute-center slds-large-order_3 slds-p-bottom_large">
+					    <span><p class="slds-x-large-size_1-of-1 text-font2">Usegu@roc.com</p></span>
+					  </div>
+					  <div class="slds-col email-hidden slds-size_1-of-1 slds-large-size_1-of-12 slds-align_absolute-center slds-large-order_4">
+					    <span><p class=" slds-x-large-size_1-of-1 text-font2">Total Contribution</p></span>
+					  </div>
+					  <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-12 slds-align_absolute-center slds-large-order_5">
+					    <span><p class="slds-size_xx-large text-font1">$24,346</p></span>
+					  </div>
+					  <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-12 slds-p-right_x-large slds-align_absolute-center slds-large-order_6 ammount-hidden text-font1">
+					    <span><p >$242,34</p></span>
+					  </div>
+					  <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-12 slds-align_absolute-center slds-large-order_7 ammount-hidden text-font1">
+					    <span><p >$242,36</p></span>
+					  </div>
+					  <div class="slds-col slds-size_1-of-1 slds-large-size_2-of-12  slds-large-order_8 slds-align_absolute-center ammount-hidden text-font1">
+					    <span><img class="slds-card  slds-size_1-of-4" src="open_120 copy.png" alt="image ">View</span>
+					  </div>
+					 
+					</div>
+					<footer class=" slds-card__footer email-hidden ">
+						<a class="slds-card__footer-action slds-align_absolute-center " href="javascript:void(0);">View Details
+						<span class="slds-assistive-text">Accounts</span>
+						</a>
+						</footer>
+				</article>
+			 </span>
+			</div>
+
+
+
+
+
+		</div>
+
+
+
+	</body>
+</div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,172 @@
+html, body {
+  overflow-x:hidden 
+} 
+
+.header-container {
+	background-color: white;	
+}
+
+.container{
+	background-color : rgb(252,252,252);
+}
+img{
+	border-radius: 50%;
+
+}
+
+.hidden-text{
+  display: none;
+}
+
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: absolute;
+  z-index: 1;
+height: 2024px;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+.slds-nav-vertical__title{
+  color: rgb(0, 160, 255);
+font-family: Roboto-Medium;
+
+}
+.slds-nav-vertical__action{
+  color: rgb(4, 4, 4);
+font-family: Roboto-Medium;
+
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+.hidden-header{
+
+	display : none;
+
+}
+
+.text-font1{
+	color: rgb(35, 36, 37);
+font-family: WorkSans-Regular;
+text-align: center;
+font-size: 1.2em;
+white-space:nowrap;
+
+}
+
+.text-font2{
+	color: rgb(146, 146, 146);
+font-family: WorkSans-Regular;
+text-align: center;
+font-size: 1.0em;
+letter-spacing: 0.05em;
+white-space:nowrap;
+}
+
+.text-font3{
+	color: rgb(146, 146, 146);
+font-family: WorkSans-Regular;
+white-space:nowrap;
+font-size: .8em;
+
+}
+.email-show{
+	display: block;
+}
+
+
+.hidden-ammount{
+	display : none;
+}
+
+
+.ammount-hidden{
+	display : none;
+}
+.button-color{
+  color: rgb(48, 48, 48);
+font-family: WorkSans-Regular;
+  background: rgb(255, 255, 255);
+border-radius: 0px;
+box-shadow: 2px 2px 30px 2px rgba(0, 0, 0, 0.08);
+border: rgb(255, 255, 255);
+
+}
+
+@media only screen and (min-width : 1024px){
+
+#mySidenav{
+  width:300px;
+  background: linear-gradient(-45deg, rgb(239, 243, 248) 0%, rgb(231, 246, 255) 100%);
+height: 1024px;
+}
+
+#main{
+  margin-left :300px;
+}
+
+.ammount-hidden{
+	display : block;
+
+text-align: center;
+	
+}
+
+
+.email-show{
+	display: block;
+}
+
+.hidden-header{
+display : flex;
+flex-direction :row;
+justify-content: space-around;
+align-content : left;
+
+}
+.email-hidden{
+	display: none;
+}
+.hidden-text{
+  display: block;
+  color: rgb(48, 48, 48);
+font-family: WorkSans-Light;
+
+font-weight: 300;
+}
+
+.hidden-button{
+  display:none;
+}
+.remove-padding{
+	padding-bottom: 0px;
+}
+}
